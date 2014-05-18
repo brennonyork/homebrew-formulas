@@ -9,6 +9,8 @@ class TitanServer < Formula
   url "http://s3.thinkaurelius.com/downloads/titan/titan-server-0.4.4.zip"
   sha1 "549f14f372fb94bf567a34f7e1bcc650addfee8a"
 
+  patch :DATA
+
   def install
     libexec.install %w[conf doc ext lib log rexhome]
     (libexec/"bin").install "bin/titan.sh" => "titan"
