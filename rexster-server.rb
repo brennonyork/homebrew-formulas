@@ -9,14 +9,14 @@ class RexsterServer < Formula
 
   def install
     libexec.install %w[config data doc ext lib]
-    (libexec/"bin").install "bin/rexster.sh" => "rexster-server"
+    (libexec/"bin").install "bin/rexster.sh" => "rexster"
     (libexec/"bin").install "bin/rexster-service.sh" => "rexster-service"
-    bin.install_symlink libexec/"bin/rexster-server"
+    bin.install_symlink libexec/"bin/rexster"
     bin.install_symlink libexec/"bin/rexster-service"
   end
 
   test do
-    system "#{bin}/rexster-server", "-h"
+    system "#{bin}/rexster", "-h"
   end
 end
 
