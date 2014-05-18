@@ -107,7 +107,7 @@ index 0ea74c9..a78c48b 100755
  
 -BIN="`dirname $0`"
 +SOURCE="${BASH_SOURCE[0]}"
-++while [ -h "$SOURCE" ]; do
++while [ -h "$SOURCE" ]; do
 +  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 +  SOURCE="$(readlink "$SOURCE")"
 +  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
