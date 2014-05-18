@@ -12,11 +12,11 @@ class TitanServer < Formula
   patch :DATA
 
   def install
-    libexec.install %w[conf doc ext lib log rexhome]
-    (libexec/"bin").install "bin/titan.sh" => "titan"
-    (libexec/"bin").install "bin/rexster.sh" => "titan-rexster"
-    (libexec/"bin").install "bin/rexster-console.sh" => "titan-rexster-console"
-    bin.install_symlink libexec/"bin/titan"
+    libexec.install %w[bin conf doc ext lib log rexhome]
+    #(libexec/"bin").install "bin/titan.sh" => "titan"
+    #(libexec/"bin").install "bin/rexster.sh" => "titan-rexster"
+    #(libexec/"bin").install "bin/rexster-console.sh" => "titan-rexster-console"
+    bin.install_symlink libexec/"bin/titan.sh" => "titan"
     bin.install_symlink libexec/"bin/titan-rexster"
     bin.install_symlink libexec/"bin/titan-rexster-console"
   end
